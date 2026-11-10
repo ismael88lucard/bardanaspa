@@ -4,53 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bardana Spa · Belleza en equilibrio</title>
-<meta name="description" content="Bardana Spa — un espacio de bienestar y belleza en equilibrio. Masajes, faciales y rituales de cuidado personal.">
+<meta name="description" content="Bardana Spa — un espacio de bienestar y belleza en equilibrio en Quito. Masajes, rituales faciales y cuidado personal.">
+<meta name="theme-color" content="#FAF6EE">
+<link rel="canonical" href="https://bardanaspa.vercel.app/">
 <link rel="icon" href="assets/logo.jpeg">
+
+<!-- Vista previa al compartir (WhatsApp, Facebook, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+<meta property="og:site_name" content="Bardana Spa">
+<meta property="og:title" content="Bardana Spa · Belleza en equilibrio">
+<meta property="og:description" content="Un espacio creado para consentirte, relajarte y resaltar tu belleza natural.">
+<meta property="og:url" content="https://bardanaspa.vercel.app/">
+<meta property="og:image" content="https://bardanaspa.vercel.app/assets/logo.jpeg">
+<meta name="twitter:card" content="summary">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<!-- Datos estructurados para Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DaySpa",
+  "name": "Bardana Spa",
+  "slogan": "Belleza en equilibrio",
+  "description": "Un espacio creado para consentirte, relajarte y resaltar tu belleza natural.",
+  "url": "https://bardanaspa.vercel.app/",
+  "image": "https://bardanaspa.vercel.app/assets/logo.jpeg",
+  "logo": "https://bardanaspa.vercel.app/assets/logo.jpeg",
+  "telephone": "+593995316491",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Rumichaca Ñan y Calle 1",
+    "addressLocality": "Quito",
+    "addressCountry": "EC"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -0.2927173, "longitude": -78.5530052 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "16:00" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/18XPfSweXH/",
+    "https://www.tiktok.com/@bardanaspa"
+  ]
+}
+</script>
 </head>
 <body>
+
+<!-- Símbolos SVG reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="leaf-mark" viewBox="0 0 24 24">
+      <path d="M3 21C3 11 9 4 21 3c0 11-6 17-18 18Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M3 21 15 9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
 <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#inicio" class="nav__brand">
-      <img src="assets/logo.jpeg" alt="Bardana Spa" class="nav__logo">
-      <span>Bardana <em>Spa</em></span>
+    <a href="#inicio" class="nav__brand" aria-label="Bardana Spa, ir al inicio">
+      <img src="assets/logo.jpeg" alt="" width="36" height="36" class="nav__logo">
+      <span>Bardana Spa</span>
     </a>
-    <nav class="nav__links" id="navLinks">
+    <nav class="nav__links" id="navLinks" aria-label="Principal">
       <a href="#nosotros">Nosotros</a>
       <a href="#servicios">Servicios</a>
       <a href="#beneficios">Beneficios</a>
+      <a href="#visita">Ubicación</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <a href="https://wa.me/593978835726?text=Hola%20Bardana%20Spa%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="nav__cta">Reservar</a>
-    <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+    <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
+<main id="contenido">
+
 <!-- ===== HERO ===== -->
 <section class="hero" id="inicio">
   <div class="hero__ring" aria-hidden="true"></div>
-  <svg class="hero__branch" viewBox="0 0 600 800" aria-hidden="true">
-    <path id="branchPath" d="M40,780 C120,650 90,520 160,430 C220,350 180,260 240,180 C280,130 320,90 300,20"
-      fill="none" stroke="url(#branchGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Rama que crece y se llena de hojas: eco del árbol del logo -->
+  <svg class="hero__branch" viewBox="0 0 600 800" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="branchGrad" x1="0" y1="1" x2="0" y2="0">
-        <stop offset="0%" stop-color="#C99A34"/>
+        <stop offset="0%" stop-color="#A97C1F"/>
         <stop offset="100%" stop-color="#E9C874"/>
       </linearGradient>
+      <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#E9C874"/>
+        <stop offset="100%" stop-color="#A97C1F"/>
+      </linearGradient>
+      <g id="leafShape">
+        <path d="M0 0C10-15 34-15 48 0 34 15 10 15 0 0Z" fill="url(#leafGrad)"/>
+        <path d="M3 0H38" stroke="#FAF6EE" stroke-opacity=".55" stroke-width="1" stroke-linecap="round"/>
+      </g>
     </defs>
+
+    <path id="branchPath" d="M40,780 C120,650 90,520 160,430 C220,350 180,260 240,180 C280,130 320,90 300,20"
+      fill="none" stroke="url(#branchGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <g transform="translate(104 590) rotate(-35)"><g class="leaf" style="--d:1.4s;--s:1.25"><use href="#leafShape"/></g></g>
+    <g transform="translate(104 590) rotate(-150)"><g class="leaf" style="--d:1.5s;--s:1.05"><use href="#leafShape"/></g></g>
+    <g transform="translate(160 430) rotate(-25)"><g class="leaf" style="--d:1.8s;--s:1.2"><use href="#leafShape"/></g></g>
+    <g transform="translate(160 430) rotate(-160)"><g class="leaf" style="--d:1.9s;--s:1"><use href="#leafShape"/></g></g>
+    <g transform="translate(200 305) rotate(-40)"><g class="leaf" style="--d:2.3s;--s:1.15"><use href="#leafShape"/></g></g>
+    <g transform="translate(200 305) rotate(-145)"><g class="leaf" style="--d:2.4s;--s:1.1"><use href="#leafShape"/></g></g>
+    <g transform="translate(240 180) rotate(-20)"><g class="leaf" style="--d:2.7s;--s:1.2"><use href="#leafShape"/></g></g>
+    <g transform="translate(240 180) rotate(-155)"><g class="leaf" style="--d:2.8s;--s:1"><use href="#leafShape"/></g></g>
+    <g transform="translate(292 107) rotate(-50)"><g class="leaf" style="--d:3.1s;--s:1"><use href="#leafShape"/></g></g>
+    <g transform="translate(292 107) rotate(-130)"><g class="leaf" style="--d:3.2s;--s:.9"><use href="#leafShape"/></g></g>
+    <g transform="translate(300 20) rotate(-95)"><g class="leaf" style="--d:3.4s;--s:1.3"><use href="#leafShape"/></g></g>
   </svg>
 
   <div class="hero__content">
     <p class="eyebrow">Quito, Ecuador</p>
-    <h1>Bardana <em>Spa</em></h1>
+    <h1><span class="metal">Bardana <em>Spa</em></span></h1>
     <p class="hero__tagline">Belleza en equilibrio</p>
     <p class="hero__copy">Un espacio creado para consentirte, relajarte y resaltar tu belleza natural.</p>
     <div class="hero__actions">
@@ -58,16 +139,16 @@
       <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
     </div>
   </div>
-  <a href="#nosotros" class="hero__scroll" aria-label="Bajar">
+  <a href="#nosotros" class="hero__scroll" aria-label="Bajar a Nosotros">
     <span></span>
   </a>
 </section>
 
 <!-- ===== SOBRE NOSOTROS ===== -->
-<section class="about" id="nosotros">
+<section class="about reveal" id="nosotros">
   <div class="about__media">
     <div class="about__frame">
-      <img src="assets/logo.jpeg" alt="Bardana Spa" class="about__logo">
+      <img src="assets/logo.jpeg" alt="Logo de Bardana Spa" width="1454" height="1082" class="about__logo" decoding="async">
     </div>
   </div>
   <div class="about__text">
@@ -79,24 +160,23 @@
     <p>En Bardana Spa combinamos técnicas manuales, productos naturales y un ambiente sereno
       para que cada visita sea un momento de verdadero equilibrio.</p>
     <div class="about__stats">
-      <div><span data-count="5" data-suffix="+">0</span>Años de Experiencia</div>
-      <div><span data-count="100" data-suffix="%">0</span>Ambiente Natural</div>
-      <div><span data-count="12" data-suffix="+">0</span>Rituales de Bienestar</div>
+      <div><span class="metal" data-count="5" data-suffix="+">5+</span>Años de Experiencia</div>
+      <div><span class="metal" data-count="100" data-suffix="%">100%</span>Ambiente Natural</div>
+      <div><span class="metal" data-count="12" data-suffix="+">12+</span>Rituales de Bienestar</div>
     </div>
   </div>
 </section>
 
-<!-- ===== VIDEO: EXPERIENCIA ===== -->
-<div class="media-banner">
-  <video src="assets/video/vdo_1.mp4" autoplay muted loop playsinline></video>
-  <p class="media-banner__caption">Sumérgete en un<br><em>ritual de calma</em></p>
-</div>
-
-<div class="divider" aria-hidden="true">
-  <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
-    <path d="M0,30 C300,60 300,0 600,30 C900,60 900,0 1200,30" fill="none" stroke="#D9B15A" stroke-width="1"/>
-  </svg>
-</div>
+<!-- ===== VIDEO 1: el espacio (16:9, se muestra completo, sin texto encima) ===== -->
+<section class="film reveal" aria-labelledby="film-title">
+  <figure class="frame frame--wide">
+    <video data-autoplay muted loop playsinline preload="none"
+           poster="assets/img/poster_1.jpg" aria-label="Recorrido por la cabina de Bardana Spa">
+      <source src="assets/video/vdo_1.mp4" type="video/mp4">
+    </video>
+  </figure>
+  <h2 id="film-title" class="film__title">Sumérgete en un <em>ritual de calma</em></h2>
+</section>
 
 <!-- ===== SERVICIOS ===== -->
 <section class="services" id="servicios">
@@ -104,49 +184,49 @@
   <h2 class="center">Servicios</h2>
 
   <div class="services__grid">
-    <article class="service-card">
-      <div class="service-card__icon">
-        <svg viewBox="0 0 48 48"><path d="M24 4C14 4 8 14 8 24c0 10 6 18 16 20 10-2 16-10 16-20C40 14 34 4 24 4Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M24 12v20M16 20c4 2 4 6 8 8M32 20c-4 2-4 6-8 8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+    <article class="service">
+      <div class="service__icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4C14 4 8 14 8 24c0 10 6 18 16 20 10-2 16-10 16-20C40 14 34 4 24 4Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M24 12v20M16 20c4 2 4 6 8 8M32 20c-4 2-4 6-8 8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
       </div>
       <h3>Masaje relajante</h3>
       <p>Técnica de liberación de tensión muscular con aceites esenciales para una relajación profunda.</p>
     </article>
 
-    <article class="service-card">
-      <div class="service-card__icon">
-        <svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 40c2-8 6-12 10-12s8 4 10 12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <article class="service">
+      <div class="service__icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 40c2-8 6-12 10-12s8 4 10 12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
       </div>
       <h3>Ritual facial</h3>
       <p>Limpieza profunda, exfoliación e hidratación para revelar una piel luminosa y descansada.</p>
     </article>
 
-    <article class="service-card">
-      <div class="service-card__icon">
-        <svg viewBox="0 0 48 48"><path d="M24 6c6 6 12 12 12 20a12 12 0 1 1-24 0c0-8 6-14 12-20Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <article class="service">
+      <div class="service__icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c6 6 12 12 12 20a12 12 0 1 1-24 0c0-8 6-14 12-20Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
       </div>
       <h3>Exfoliación corporal</h3>
       <p>Renovación celular con sales e ingredientes naturales que dejan la piel suave y renovada.</p>
     </article>
 
-    <article class="service-card">
-      <div class="service-card__icon">
-        <svg viewBox="0 0 48 48"><path d="M8 24c4-10 12-16 16-16s12 6 16 16c-4 10-12 16-16 16S12 34 8 24Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <article class="service">
+      <div class="service__icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 24c4-10 12-16 16-16s12 6 16 16c-4 10-12 16-16 16S12 34 8 24Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
       </div>
       <h3>Reflexología</h3>
       <p>Estimulación de puntos de presión en pies y manos para equilibrar cuerpo y mente.</p>
     </article>
 
-    <article class="service-card">
-      <div class="service-card__icon">
-        <svg viewBox="0 0 48 48"><path d="M24 42s-14-9-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 11-14 20-14 20Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <article class="service">
+      <div class="service__icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42s-14-9-14-20a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 11-14 20-14 20Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
       </div>
       <h3>Ritual de pareja</h3>
       <p>Una experiencia compartida de relajación en un ambiente pensado para dos.</p>
     </article>
 
-    <article class="service-card">
-      <div class="service-card__icon">
-        <svg viewBox="0 0 48 48"><path d="M24 4v10M24 34v10M4 24h10M34 24h10" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <article class="service">
+      <div class="service__icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4v10M24 34v10M4 24h10M34 24h10" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
       </div>
       <h3>Terapia con piedras calientes</h3>
       <p>Calor natural que libera tensión profunda y mejora la circulación.</p>
@@ -154,11 +234,17 @@
   </div>
 </section>
 
-<!-- ===== IMAGEN: ESPACIO ===== -->
-<div class="media-banner media-banner--short">
-  <img src="assets/img/img_1.jpeg" alt="Bardana Spa">
-  <p class="media-banner__caption">Ambientes pensados<br><em>para tu bienestar</em></p>
-</div>
+<!-- ===== IMAGEN 1 (vertical 3:4): foto completa + texto al lado ===== -->
+<section class="feature reveal" aria-labelledby="feat-1">
+  <figure class="frame frame--portrait">
+    <img src="assets/img/img_1.jpeg" width="1086" height="1448" loading="lazy" decoding="async"
+         alt="Terapeuta realizando un masaje de espalda en una cabina de Bardana Spa">
+  </figure>
+  <div class="feature__text">
+    <h2 id="feat-1">Ambientes pensados <em>para tu bienestar</em></h2>
+    <p>Cada detalle de la cabina está cuidado para que llegues, respires y te desconectes desde el primer minuto.</p>
+  </div>
+</section>
 
 <!-- ===== BENEFICIOS ===== -->
 <section class="why" id="beneficios">
@@ -166,34 +252,48 @@
     <p class="eyebrow">Por qué elegirnos</p>
     <h2>Un equilibrio que se siente</h2>
     <ul class="why__list">
-      <li><span>01</span>Terapeutas certificadas con formación continua</li>
-      <li><span>02</span>Productos naturales y de origen consciente</li>
-      <li><span>03</span>Ambiente diseñado para la calma sensorial</li>
-      <li><span>04</span>Rituales personalizados según cada piel y cuerpo</li>
+      <li><svg class="leaf-mark" aria-hidden="true"><use href="#leaf-mark"/></svg>Terapeutas certificadas con formación continua</li>
+      <li><svg class="leaf-mark" aria-hidden="true"><use href="#leaf-mark"/></svg>Productos naturales y de origen consciente</li>
+      <li><svg class="leaf-mark" aria-hidden="true"><use href="#leaf-mark"/></svg>Ambiente diseñado para la calma sensorial</li>
+      <li><svg class="leaf-mark" aria-hidden="true"><use href="#leaf-mark"/></svg>Rituales personalizados según cada piel y cuerpo</li>
     </ul>
   </div>
-  <div class="why__badge">
+  <div class="why__badge" aria-hidden="true">
     <div class="why__circle">
       <span>Belleza<br><em>en equilibrio</em></span>
     </div>
   </div>
 </section>
 
-<!-- ===== VIDEO: DETALLE ===== -->
-<div class="media-banner">
-  <video src="assets/video/vdo_2.mp4" autoplay muted loop playsinline></video>
-  <p class="media-banner__caption">Cada detalle,<br><em>pensado para ti</em></p>
-</div>
+<!-- ===== VIDEO 2 (vertical 9:16): completo + texto al lado ===== -->
+<section class="feature feature--flip reveal" aria-labelledby="feat-2">
+  <div class="feature__text">
+    <h2 id="feat-2">Cada detalle, <em>pensado para ti</em></h2>
+    <p>Manos atentas, ritmo pausado y productos naturales en cada sesión.</p>
+  </div>
+  <figure class="frame frame--video">
+    <video data-autoplay muted loop playsinline preload="none"
+           poster="assets/img/poster_2.jpg" aria-label="Sesión de relajación facial en Bardana Spa">
+      <source src="assets/video/vdo_2.mp4" type="video/mp4">
+    </video>
+  </figure>
+</section>
 
-<!-- ===== IMAGEN: REFUGIO ===== -->
-<div class="media-banner media-banner--short">
-  <img src="assets/img/img_2.jpeg" alt="Bardana Spa">
-  <p class="media-banner__caption">Un refugio de<br><em>belleza y equilibrio</em></p>
-</div>
+<!-- ===== IMAGEN 2 (vertical 3:4): foto completa + texto al lado ===== -->
+<section class="feature reveal" aria-labelledby="feat-3">
+  <figure class="frame frame--portrait">
+    <img src="assets/img/img_2.jpeg" width="1200" height="1600" loading="lazy" decoding="async"
+         alt="Clienta recibiendo un tratamiento facial en Bardana Spa">
+  </figure>
+  <div class="feature__text">
+    <h2 id="feat-3">Un refugio de <em>belleza y equilibrio</em></h2>
+    <p>Un espacio creado para consentirte y resaltar tu belleza natural.</p>
+  </div>
+</section>
 
 <!-- ===== UBICACIÓN Y HORARIOS ===== -->
 <section class="visit" id="visita">
-  <div class="visit__card">
+  <div class="visit__card reveal">
     <p class="eyebrow">Visítanos</p>
     <h2>Horarios &amp; ubicación</h2>
     <ul class="visit__hours">
@@ -206,15 +306,17 @@
   <div class="visit__map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.7662520075455!2d-78.55300522503548!3d-0.2927172997044029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMTcnMzMuOCJTIDc4wrAzMycwMS42Ilc!5e0!3m2!1ses!2sec!4v1787506440345!5m2!1ses!2sec"
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="strict-origin-when-cross-origin" title="Ubicación Bardana Spa"></iframe>
+      referrerpolicy="strict-origin-when-cross-origin" title="Ubicación de Bardana Spa en Google Maps"></iframe>
   </div>
 </section>
+
+</main>
 
 <!-- ===== CONTACTO / FOOTER ===== -->
 <footer class="footer" id="contacto">
   <div class="footer__inner">
     <div class="footer__brand">
-      <img src="assets/logo.jpeg" alt="Bardana Spa" class="footer__logo">
+      <img src="assets/logo.jpeg" alt="" width="48" height="48" class="footer__logo" loading="lazy">
       <p>Bardana Spa<br><em>Belleza en equilibrio</em></p>
     </div>
 
@@ -226,24 +328,24 @@
     <div class="footer__social">
       <h4>Síguenos</h4>
       <div class="footer__icons">
-        <a href="https://www.facebook.com/share/18XPfSweXH/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24"><path d="M15 8h2V4h-2c-2.2 0-4 1.8-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <a href="https://www.facebook.com/share/18XPfSweXH/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook de Bardana Spa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 8h2V4h-2c-2.2 0-4 1.8-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
         </a>
-        <a href="https://www.tiktok.com/@bardanaspa?_r=1&_t=ZS-9981mHFeES4" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg viewBox="0 0 24 24"><path d="M14 4v10.5a3.5 3.5 0 1 1-3-3.46" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 4c.4 2.2 2 3.6 4 3.9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <a href="https://www.tiktok.com/@bardanaspa?_r=1&_t=ZS-9981mHFeES4" target="_blank" rel="noopener" aria-label="TikTok de Bardana Spa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v10.5a3.5 3.5 0 1 1-3-3.46" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 4c.4 2.2 2 3.6 4 3.9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
         </a>
       </div>
     </div>
   </div>
   <div class="footer__bottom">
-    <p>© <span id="year"></span> Bardana Spa — Todos los derechos reservados</p>
+    <p>© <span id="year">2026</span> Bardana Spa — Todos los derechos reservados</p>
   </div>
 </footer>
 
 <!-- ===== WHATSAPP FLOTANTE ===== -->
 <a href="https://wa.me/593995316491?text=Hola%20Bardana%20Spa%2C%20quiero%20más%20información"
    target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
-  <svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.9 2 7L3 29l6.5-2.2c2 1.1 4.2 1.7 6.5 1.7 7 0 12.7-5.7 12.7-12.7S23 3 16 3Zm0 23.1c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1.3 1.3-3.8-.3-.4a10.2 10.2 0 0 1-1.6-5.5C5.4 9.8 10.2 5 16 5s10.6 4.8 10.6 10.7S21.9 26.1 16 26.1Zm5.9-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.1-.2.3-.8 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4Z"/></svg>
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.9 2 7L3 29l6.5-2.2c2 1.1 4.2 1.7 6.5 1.7 7 0 12.7-5.7 12.7-12.7S23 3 16 3Zm0 23.1c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1.3 1.3-3.8-.3-.4a10.2 10.2 0 0 1-1.6-5.5C5.4 9.8 10.2 5 16 5s10.6 4.8 10.6 10.7S21.9 26.1 16 26.1Zm5.9-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.1-.2.3-.8 1.1-1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4Z"/></svg>
 </a>
 
 <script src="script.js"></script>

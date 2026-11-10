@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bardanaspa.vercel.app/sitemap.xml
